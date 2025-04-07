@@ -18,6 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DPSG9BQ5RY" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DPSG9BQ5RY');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-grow py-10">
